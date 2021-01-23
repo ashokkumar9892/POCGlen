@@ -21,10 +21,23 @@ export default function Home() {
               </a>
               
           </>}
-    {session && <>
-      Signed in as {session.user.email} <br/>
-      <button onClick={signout}>Sign out</button>
-    </>}
+          {session && <>
+            {session.user.image && <span style={{backgroundImage: `url(${session.user.image})` }} className={styles.avatar}/>}
+            <span className={styles.signedInText}>
+              <small>Signed in as</small><br/>
+              <strong>{session.user.email || session.user.name}</strong>
+              </span>
+            <a
+                href={`/api/auth/signout`}
+                className={styles.button}
+                onClick={(e) => {
+                  e.preventDefault()
+                  signOut()
+                }}
+              >
+                Sign out
+              </a>
+          </>}
   </p>
   </div>
 }

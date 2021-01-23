@@ -25,12 +25,12 @@ const options = {
       domain: process.env.AUTH0_DOMAIN
     }),
     Providers.Facebook({
-      clientId: process.env.FACEBOOK_ID,
-      clientSecret: process.env.FACEBOOK_SECRET
+      clientId: '445695906807121',
+      clientSecret: '136f33b2ba38e9051afc37635935c085'
     }),
     Providers.GitHub({
       clientId: 'd43f00862470d6bb45b9',
-      clientSecret: '99ff0a7bd252680f1859336e24269fdab68168be '
+      clientSecret: 'fb61720c30fdbc7dd2bb958d5d08bef646fb0094'
     }),
     Providers.Google({
       clientId: process.env.GOOGLE_ID,
